@@ -1,0 +1,20 @@
+import pandas as pd
+#define dictionary containing employee information
+data1={'name':['anuj','amith','amar','anwith'],
+        'age':[23,12,34,56],
+         'address':['ongole','kuwit','chennai','china'],
+         'qualification':['mba','MA','MCA','BA']}
+#defining a dictionary contaning employee data
+data2={'name':['abhi','ayushi','dhiraj','hitesh'],
+       'age':[17,14,12,52],
+       'address':['nagpur','kanpur','allhabad','ongole'],
+       'qualification':['btech','B.A','Bcom','B.hons']}
+#converting dictionary into dataframe
+df=pd.DataFrame(data1,index=[0,1,2,3])
+df1=pd.DataFrame(data2,index=[4,5,6,7])
+print(df,"\n\n",df1)
+
+print(df,"\n\n",df1)
+#using ignore_index
+res=pd.concat([df,df1],ignore_index=True)
+res
