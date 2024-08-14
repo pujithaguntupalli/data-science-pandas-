@@ -1,0 +1,18 @@
+import pandas as pd
+#definging a dict containg employee data
+data1={'key':['k0','k1','k2','k3'],
+       'name':['jai','princi','gaurav','anuj'],
+       'age':[27,24,22,32]}
+
+#define a dictionary containing employee data
+data2={'key':['k0','k1','k2','k3'],
+       'address':['ongole','vizag','tangutur','gudur'],
+       'qualification':['msc','mca','btech','bcom']}
+#converting the dictionary into dat frame
+df=pd.DataFrame(data1)
+
+#converting the dictionary into dataframe
+df1=pd.DataFrame(data2)
+print(df,"\n\n",df1)
+#using .merge() function
+res=pd.merge(df,df1,on='key')
