@@ -1,0 +1,16 @@
+#importing pandas as pd
+import pandas as pd
+#define a dictionary containg employee data
+data1={'name':['jai','princi','gaurav','anuj'],
+       'age':[27,24,22,32],
+       'address':['nagpur','kanpur','allahabad','kannuj'],
+       'qualification':['Msc','MA','Phd','m.a']}
+#convert the dictionary into datframe
+df=pd.DataFrame(data1,index=[0,1,2,3])
+
+#creating a series
+s1=pd.Series([1000,2000,3000,4000],name='salary')
+print(df,"\n\n",s1)
+#combaining series and dataframe
+res=pd.concat([df,s1],axis=1)
+res
